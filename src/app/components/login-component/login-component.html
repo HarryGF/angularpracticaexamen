@@ -1,0 +1,13 @@
+<h1>Login</h1>
+
+<h2 style="color:blue">{{mensaje}}</h2> 
+
+<form>
+    <label>Nombre usuario: </label>
+    <input type="text" name="cajaUsuario" #cajaUsuario class="form-control"/>
+    <label>Contraseña: </label>
+    <input type="password" name="cajaContraseña" #cajaContraseña class="form-control"/>
+    <button type="button" (click)="logInEmpleado()" class="btn btn-primary mt-3">
+        Iniciar sesion
+    </button>
+</form>

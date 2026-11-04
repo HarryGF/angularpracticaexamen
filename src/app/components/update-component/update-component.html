@@ -1,0 +1,28 @@
+<h1>Update Departamento</h1>
+@if (alumno) {
+    <form>
+        <label>Id alumno: </label>
+            <input type="number" name="cajaId" #cajaId class="form-control"
+                [value]="alumno.idAlumno" disabled/>
+
+        <label>Nombre: </label>
+            <input type="text" name="cajaNombre" #cajaNombre class="form-control"
+                [value]="alumno.nombre"/>
+        <label>Apellido: </label>
+            <input type="text" name="cajaApellidos" #cajaApellidos class="form-control"
+                [value]="alumno.apellidos"/>
+        <label>Imagen: </label>
+            <input type="text" name="cajaImagen" #cajaImagen class="form-control"
+                [value]="alumno.imagen"/>
+        <label>Activo: </label>
+            <input type="number" name="cajaEstado" #cajaEstado class="form-control"
+                [value]="alumno.activo"/>
+        <label>Id Curso: </label>
+            <input type="number" name="cajaCurso" #cajaCurso class="form-control"
+                [value]="alumno.idCurso"/>
+
+      <button type="button" class="btn btn-warning mt-2" (click)="updateAlumnoToken()">
+          Editar
+      </button>
+  </form>
+}

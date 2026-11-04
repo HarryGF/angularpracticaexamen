@@ -1,0 +1,19 @@
+<h1>Insertar Alumno</h1>
+<form>
+    <label>Id alumno: </label>
+        <input type="number" name="cajaId" #cajaId class="form-control"/>
+    <label>Nombre: </label>
+        <input type="text" name="cajaNombre" #cajaNombre class="form-control"/>
+    <label>Apellido: </label>
+        <input type="text" name="cajaApellidos" #cajaApellidos class="form-control"/>
+    <label>Imagen: </label>
+        <input type="text" name="cajaImagen" #cajaImagen class="form-control"/>
+    <label>Activo: </label>
+        <input type="number" name="cajaEstado" #cajaEstado class="form-control"/>
+    <label>Id Curso: </label>
+        <input type="number" name="cajaCurso" #cajaCurso class="form-control"/>
+
+    <button type="button" class="btn btn-warning mt-2" (click)="insertAlumnoToken()">
+        Insertar
+    </button>
+</form>

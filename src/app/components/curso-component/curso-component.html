@@ -1,1 +1,42 @@
-
+<div class="d-flex justify-content-between align-items-center mb-3">
+    <h1>Alumnos de la clase {{idCurso}}</h1>
+    
+    <button (click)="generarPDF()" class="btn btn-warning">
+        Generar informe PDF
+    </button>
+</div>
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID Alumno</th>
+            <th>Nombre</th>
+            <th>Apellidos</th>
+            <th>Imagen</th>
+            <th>Activo</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @for(alumno of alumnos; track alumno) {
+            <tr>
+                <td>{{alumno.idAlumno}}</td>
+                <td>{{alumno.nombre}}</td>
+                <td>{{alumno.apellidos}}</td>
+                <td><img src="{{alumno.imagen}}" style="width: 200px; height: 150px;"/></td>
+                <td>{{alumno.activo}}</td>
+                <td>
+                    <a [routerLink]="['/update/'+alumno.idAlumno.toString()]"
+                    class="btn btn-info">
+                        Edit
+                    </a>
+                </td>
+                <td>
+                    <button class="btn btn-danger" 
+                    (click)="deleteAlumno(alumno.idAlumno)">
+                        Eliminar
+                    </button>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
